@@ -43,14 +43,14 @@ export const MenuItems = [
     // },
     {
         title:'حول الشركة',
-        url:'/',
+        url:'/about',
         cName:'nav-links',
         show:false,
         display:true
     },
     {
         title:'اتصل بنا',
-        url:'/teachers',
+        url:'/contactus',
         cName:'nav-links',
         show:false,
         display:true

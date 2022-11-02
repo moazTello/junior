@@ -30,6 +30,7 @@ import api from './api/classes';
 import LogIn from './pages/LogIn';
 import Trips from './pages/Trips';
 import MyReservation from './pages/MyReservation';
+import ContactUs from './pages/ContactUs';
 function App() {
   const [userName,setUserName] = useState('');
   const [password,setPassword] = useState('');
@@ -274,7 +275,10 @@ function App() {
       setLogedInUser(response);
       setNavDisplay(false);
       navigate('/trips');
-
+    }
+    else{
+      alert('المعلومات غير صحيحة يرجى اعادة تعبئة المعلومات ')
+      navigate('/login');
     }
   }
   const handleTripUser = (id) => {
@@ -320,6 +324,7 @@ function App() {
         handleDeleteTripUser={handleDeleteTripUser}
       />}>
       </Route>
+      <Route path='/contactus' element={<ContactUs/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='*' element={<Missing/>}/>
       </Route>
