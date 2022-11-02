@@ -85,7 +85,8 @@ function App() {
       <Route path='/' element={<Layout
         navDisplay={navDisplay}
       />}>
-      <Route index element={<HomePage/>}/>
+      {/* <Route index element={<HomePage/>}/> */}
+      <Route path='/junior' element={<HomePage/>}/>
       <Route 
         path='/login' 
         element={<LogIn
@@ -114,4 +115,8 @@ function App() {
   );
 }
 // npx json-server -p 3500 -w src/data/db.json
+// git add .
+// git commit -m "Deployed website"      
+// git push
+// npm run deploy
 export default App;
