@@ -97,6 +97,7 @@ function App() {
       <Route path='/trips' element={<Trips
         trips={trips}
         handleTripUser={handleTripUser}
+        logedInUser={logedInUser}
       />}>
       </Route>
       <Route path='/myreservation' element={<MyReservation

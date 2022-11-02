@@ -38,10 +38,3 @@ const Navbar = ({navDisplay}) => {
 }
 
 export default Navbar;
-{/* <>
-                                {item.display && 
-                                    <Link to={item.url} key={index} className={item.cName} >
-                                         <p>{item.title}</p> 
-                                    </Link>
-                                }
-                            </> */}
