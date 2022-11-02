@@ -71,7 +71,7 @@ export const MenuItems = [
     },
     {
         title:'الرئيسية',
-        url:'/main',
+        url:'/junior',
         cName:'nav-links',
         show:true,
         display:true
