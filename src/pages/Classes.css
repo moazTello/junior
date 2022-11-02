@@ -1,0 +1,113 @@
+.container{
+    width: 100%;
+    height: 83vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.loginbox{
+    width:400px;
+    height: 400px;
+    color: rgb(254,109,81);
+    border:solid 1px rgb(254,109,81);
+    background-color: rgba(255, 254, 253,80%);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+}
+.LoginPerson{
+    width:150px;
+    margin: 10px;
+}
+.addInput{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 50px;
+    width: 240px;
+    margin:10px;
+}
+.inputs{
+    width: 200px;
+    height: 25px;
+    border: solid 1px rgb(254,109,81);
+    border-radius: 15px;
+    padding-left: 20px;
+    color:rgb(254,109,81);
+}
+.inputs:focus{
+    outline: none;
+}
+.btn{
+    height: 30px;
+    width:100px;
+    margin-right: 5px;
+    color:white;
+    background-color: rgb(254,109,81);
+    border: solid 1px rgb(254,109,81);
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: white;
+    color:rgb(254,109,81);
+    transition: all 0.5s ease-in-out;
+}
+.link{
+    color:rgb(100, 91, 88);
+    text-decoration: none;
+    /* background-color: rgb(254,109,81); */
+    /* padding: 5px; */
+    /* border-radius: 10px; */
+}
+.link:hover{
+    color: rgb(254,109,81);
+}
+.tripsschedul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 430px;
+    background-color: rgba(255, 254, 253,80%);
+    border-radius: 15px;
+    padding: 10px;
+    height: 450px;
+    color: rgb(125, 98, 94); 
+}
+.overflow{
+    height: 385px;
+    overflow-y: scroll;
+    width: 100%;
+}
+.overflow::-webkit-scrollbar {
+    display: none;
+  }
+.tripcontent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+}
+.tripcontent:hover{
+    color: white;
+    background-color: rgb(254,109,81);
+}
+.trip{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.tripitem{
+    width:80px;
+    text-align: center;
+}

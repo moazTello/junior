@@ -1,0 +1,259 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "username": "0968767511",
+      "password": "kt11100110220",
+      "name": "moaz_tello",
+      "fathername": "sameh",
+      "mothername": "hiba",
+      "birthdate": "23/9/2020",
+      "address": "artuz",
+      "iss": "0101010100102",
+      "mybalance": "10000",
+      "total_trip": "4"
+    }
+  ],
+  "trips":[
+    {
+      "id_trip":1,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    },
+    {
+      "id_trip":2,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    },
+    {
+      "id_trip":3,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    },
+    {
+      "id_trip":4,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    },
+    {
+      "id_trip":5,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    },
+    {
+      "id_trip":6,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    },
+    {
+      "id_trip":7,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    },
+    {
+      "id_trip":8,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    },
+    {
+      "id_trip":9,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    },
+    {
+      "id_trip":10,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    },
+    {
+      "id_trip":11,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    },
+    {
+      "id_trip":12,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    },
+    {
+      "id_trip":13,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    },
+    {
+      "id_trip":14,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    },
+    {
+      "id_trip":15,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    },
+    {
+      "id_trip":16,
+      "date_trip":"12/12",
+      "sets_trip":"24",
+      "destination_trip":"عرطوز",
+      "ticket_price":"15000",
+      "start_from":[
+        {
+          "1":"كازية حمودة"
+        },
+        {
+          "2":"قمرين مول"
+        }
+      ]
+    }
+  ]
+}

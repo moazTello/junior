@@ -1,0 +1,31 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "username": "",
+      "password": "",
+      "name": "",
+      "fathername": "",
+      "mothername": "",
+      "birthdate": "",
+      "address": "",
+      "iss": "",
+      "mybalance": "",
+      "total_trip": ""
+    }
+  ],
+  "trips":[
+    {
+      "id_trip":"",
+      "date_trip":"",
+      "sets_trip":"",
+      "destination_trip":"",
+      "ticket_price":"",
+      "start_from":[
+        {
+          "bla":"bla"
+        }
+      ]
+    }
+  ]
+}
