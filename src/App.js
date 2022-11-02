@@ -85,8 +85,11 @@ function App() {
       <Route path='/' element={<Layout
         navDisplay={navDisplay}
       />}>
-      <Route index element={<HomePage/>}/>
-      <Route path='/login' element={<LogIn
+      {/* <Route index element={<HomePage/>}/> */}
+      <Route
+        index 
+        // path='/login' 
+        element={<LogIn
         userName={userName}
         setUserName={setUserName}
         password={password}
