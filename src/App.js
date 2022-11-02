@@ -1,32 +1,13 @@
 import './App.css';
 import './pages/Classes.css';
-// import Navbar from './components/Navbar';
 import Layout from './components/Navbar/Layout/Layout';
 import { Route,Routes, useNavigate } from 'react-router-dom';
-// import Students from './pages/Students';
-// import Classes from './pages/Classes';
 import HomePage from './pages/HomePage';
 import { useEffect, useState } from 'react';
-// import NewClass from './pages/NewClass';
-// import ClassPage from './pages/ClassPage';
 import About from './pages/About';
 import Missing from './pages/Missing';
-// import EditClass from './pages/EditClass';
 // import { format } from 'date-fns';
-import api from './api/classes'; 
-// import AddStudentsClass from './pages/AddStudentsClass';
-// import RemoveStudentsClass from './pages/RemoveStudentsClass';
-// import AllStudents from './pages/AllStudents';
-// import NewStudent from './pages/NewStudent';
-// import StudentPage from './pages/StudentPage';
-// import EditStudent from './pages/EditStudent';
-// import Notifications from './pages/Notifications';
-// import AddTeachersClass from './pages/AddTeachersClass';
-// import AllTeachers from './pages/AllTeachers';
-// import RemoveTeachersClass from './pages/RemoveTeachersClass';
-// import NewTeacher from './pages/NewTeacher';
-// import TeacherPage from './pages/TeacherPage';
-// import EditTeacher from './pages/EditTeacher';
+import api from './api/trips';
 import LogIn from './pages/LogIn';
 import Trips from './pages/Trips';
 import MyReservation from './pages/MyReservation';
@@ -36,8 +17,7 @@ function App() {
   const [password,setPassword] = useState('');
   const [logedInUser,setLogedInUser] = useState([]);
   const [navDisplay,setNavDisplay] = useState(true);
-  const [trips,setTrips] = useState([
-    
+  const [trips,setTrips] = useState([ 
     {
       "id_trip":1,
       "date_trip":"12/12",
@@ -250,7 +230,6 @@ function App() {
     }
   ]);
   const [userTrips,setUserTrips] = useState([]);
-
   const navigate = useNavigate();
   useEffect(() => {
     const fetchClasses = async () => {
@@ -258,7 +237,6 @@ function App() {
         const response = await api.get('/trips');
         // const response2 = await api.get('/');
         // const response3 = await api.get('/teachers');
-
         setTrips(response.data);
         // setAllStudents(response2.data);
         // setAllTeachers(response3.data);
