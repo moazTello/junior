@@ -1,5 +1,6 @@
 import React from 'react';
 import UserTrip from './UserTrip';
+import { Link } from 'react-router-dom';
 const MyReservation = ({userTrips,handleDeleteTripUser}) => {
   console.log('Trips');
   return (
@@ -22,7 +23,17 @@ const MyReservation = ({userTrips,handleDeleteTripUser}) => {
                 handleDeleteTripUser={handleDeleteTripUser} />
             ))}
             </div>
-            <hr/> 
+            <hr/>
+            <Link 
+                    to='/trips'
+                    className='btn' 
+                    style={{marginTop:"5px",borderRadius:"5px",
+                            width:"80px",textDecoration:'none',
+                            paddingTop:'4px'}}
+                    onClick={() => {}}    
+                >
+                    عودة
+            </Link> 
         </div>
     </article>
   )
