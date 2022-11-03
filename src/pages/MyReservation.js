@@ -7,6 +7,8 @@ const MyReservation = ({userTrips,handleDeleteTripUser}) => {
   return (
     <article className='container'>
         <div className='tripsschedul'>
+            <div style={{margin:'10px'}}>الحجوزات التي قمت بها </div>
+            <hr style={{width:'100%',marginTop:'10px',marginBottom:'10px'}}/>
             <div className='trip'>
                 <p className='tripitem'> الغاء</p>
                 <p className='tripitem'>الوجهة </p>
@@ -23,6 +25,7 @@ const MyReservation = ({userTrips,handleDeleteTripUser}) => {
                 trip={trip}
                 handleDeleteTripUser={handleDeleteTripUser} />
             ))}
+            {!userTrips.length && <p style={{width:'100%',textAlign:'center',marginTop:'20px'}}>لا يوجد لديك اي حجوزات لعرضها</p>}
             </div>
             <hr/>
             <Link 

@@ -7,6 +7,8 @@ const Trips = ({trips,handleTripUser,setResTrip}) => {
   return (
     <article className='container'>
         <div className='tripsschedul'>
+            <div style={{margin:'10px'}}>الرحلات المتوفرة</div>
+            <hr style={{width:'100%',marginTop:'10px',marginBottom:'10px'}}/>
             <div className='trip'>
                 <p className='tripitem'> حجز</p>
                 <p className='tripitem'>الوجهة </p>
@@ -18,7 +20,6 @@ const Trips = ({trips,handleTripUser,setResTrip}) => {
             <div className='overflow' 
                 // style={{height:"400px",overflow:"scroll"}}
             >
-                {id} 
             {trips.map(trip => (
                 <Trip className=''key={trip.id_trip} 
                 trip={trip}
@@ -27,6 +28,7 @@ const Trips = ({trips,handleTripUser,setResTrip}) => {
                 setResTrip={setResTrip}
                 />
             ))}
+            {!trips.length && <p style={{width:'100%',textAlign:'center',marginTop:'20px'}}>لا يوجد اي حجوزات لعرضها</p>}
             </div>
             <hr/>
             <Link 
