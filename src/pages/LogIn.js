@@ -2,28 +2,40 @@ import React from 'react';
 import LoginPerson from '../images/LoginPerson.svg';
 import { Link } from 'react-router-dom';
 import { useEffect,useState } from 'react';
+import useWindowSize from '../hooks/useWindowSize';
 
 
 const LogIn = ({userName,setUserName,handleSubmitlogin,password,setPassword}) => {
+    const { width } = useWindowSize();
     const [hover,setHover] = useState(false);
     const [ valh,setValh ] = useState('60px');
     useEffect(() => {
-        if(userName && password !== '' ){
-            setValh('60px'); 
+        if(width > 500){
+            if(userName && password !== '' ){
+                setValh('60px'); 
+            }
+            else{
+                if(hover === false){setValh('170px')}
+                else{setValh('-50px')}
+            }
         }
         else{
-            if(hover === false){setValh('170px')}
-            else{setValh('-50px')}
+            setValh('41px'); 
         }
-    },[password,userName,hover])
+    },[password,userName,hover,width])
     const trigger = () => {
-        if(userName && password !== '' ){
-            setValh('60px'); 
+        if(width > 500){
+            if(userName && password !== '' ){
+                setValh('60px'); 
+            }
+            else{
+                setHover(!hover)
+                if(hover === false){setValh('170px')}
+                else{setValh('-50px')}
+            }
         }
         else{
-            setHover(!hover)
-            if(hover === false){setValh('170px')}
-            else{setValh('-50px')}
+            setValh('41px'); 
         }
     }
     return (
@@ -53,7 +65,7 @@ const LogIn = ({userName,setUserName,handleSubmitlogin,password,setPassword}) =>
                     />
                     <label htmlFor='password' style={{color:"rgb(254,109,81)"}}>كلمة المرور</label>
                 </div>
-                <div className='addInput' style={{height:'80px',padding:'10px'}}>
+                <div className='addInput' style={{height: width>500 ?'80px' : '40px',padding:width > 500 ?'10px' : '0px'}}>
                     <p>اذا كنت لا تمتلك حسابآ
                         <Link to='/' className='link' style={{marginRight:'10px'}}>انشاء حساب</Link> 
                     </p>

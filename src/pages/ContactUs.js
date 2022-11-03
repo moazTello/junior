@@ -4,10 +4,7 @@ const ContactUs = () => {
   console.log('About');
   return (
     <article className='container'>
-      <p style={{width:'400px',height:'400px',padding:'30px',
-                 borderRadius:'20px',color:'rgb(254,109,81)',
-                 backgroundColor:'rgba(255,255,255,80%)',
-                 textAlign:'center'}}>
+      <p className='about'>
                     <p>المقر الرئيسي للشركة : 0999999999</p>
                     <p>مكتب الاستعلامات : 0999999999</p> 
                     <p>مكتب المحاسبة : 0999999999</p> 

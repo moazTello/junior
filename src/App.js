@@ -256,7 +256,7 @@ function App() {
     }
     else{
       alert('المعلومات غير صحيحة يرجى اعادة تعبئة المعلومات ')
-      navigate('/login');
+      // navigate('/login');
     }
   }
   const handleTripUser = (id) => {
