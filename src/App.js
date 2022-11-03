@@ -12,11 +12,30 @@ import LogIn from './pages/LogIn';
 import Trips from './pages/Trips';
 import MyReservation from './pages/MyReservation';
 import ContactUs from './pages/ContactUs';
+import SelectFromTo from './pages/SelectFromTo';
 function App() {
   const [userName,setUserName] = useState('');
   const [password,setPassword] = useState('');
+  const [resTrip,setResTrip] = useState('');
   const [logedInUser,setLogedInUser] = useState([]);
   const [navDisplay,setNavDisplay] = useState(true);
+  // const [color,setColor] = useState('rgb(67,10,191)');
+  // const [background,setBackground] = useState('');
+  const [users,setUsers] = useState([ 
+    {
+      "id": 1,
+      "username": "0968767511",
+      "password": "qwerqwer",
+      "name": "moaz_tello",
+      "fathername": "sameh",
+      "mothername": "hiba",
+      "birthdate": "23/9/2020",
+      "address": "artuz",
+      "iss": "0101010100102",
+      "mybalance": "10000",
+      "total_trip": "4"
+    }
+  ]);
   const [trips,setTrips] = useState([ 
     {
       "id_trip":1,
@@ -235,10 +254,10 @@ function App() {
     const fetchClasses = async () => {
       try{
         const response = await api.get('/trips');
-        // const response2 = await api.get('/');
+        const response2 = await api.get('/Users');
         // const response3 = await api.get('/teachers');
         setTrips(response.data);
-        // setAllStudents(response2.data);
+        setUsers(response2.data);
         // setAllTeachers(response3.data);
       }
       catch(err){
@@ -248,18 +267,19 @@ function App() {
     fetchClasses();
   },[]);
   const handleSubmitlogin = () => {
-    if(userName === "0968767511" && password === "qwerqwer"){
-      const response = api.get('./Users/1');
-      setLogedInUser(response);
+    const user = users.find(user => (user.username) === userName);
+    if(userName === user.username && password === user.password){
+      // const response = api.get('./Users/1');
+      setLogedInUser(user);
       setNavDisplay(false);
-      navigate('/trips');
+      navigate(`/login/${user.id}`);
     }
     else{
       alert('المعلومات غير صحيحة يرجى اعادة تعبئة المعلومات ')
       // navigate('/login');
     }
   }
-  const handleTripUser = (id) => {
+  const handleTripUser = (id,userid) => {
     const newtrip = trips.find((trip) => (trip.id_trip) === id);
     const newtripobj = {id_trip:id,date_trip:newtrip.date_trip,sets_trip:newtrip.sets_trip,
                       destination_trip:newtrip.destination_trip,ticket_price:newtrip.ticket_price,
@@ -268,6 +288,7 @@ function App() {
     if(!findtrip){
         const usertrips = [...userTrips,newtripobj];
         setUserTrips(usertrips);
+        navigate(`/login/${userid}/myreservation`);
     }
   }
   const handleDeleteTripUser = (id) => {
@@ -281,27 +302,37 @@ function App() {
       />}>
       {/* <Route index element={<HomePage/>}/> */}
       <Route path='/junior' element={<HomePage/>}/>
-      <Route 
-        path='/login' 
-        element={<LogIn
-        userName={userName}
-        setUserName={setUserName}
-        password={password}
-        setPassword={setPassword}
-        handleSubmitlogin={handleSubmitlogin}
-      />}>
-      </Route>
-      <Route path='/trips' element={<Trips
-        trips={trips}
-        handleTripUser={handleTripUser}
-        logedInUser={logedInUser}
-      />}>
-      </Route>
-      <Route path='/myreservation' element={<MyReservation
+      <Route path='/login'>
+        <Route 
+          // path='/login'
+          index 
+          element={<LogIn
+          userName={userName}
+          setUserName={setUserName}
+          password={password}
+          setPassword={setPassword}
+          handleSubmitlogin={handleSubmitlogin}
+        />}/>
+        <Route path='/login/:id' element={<Trips
+          setResTrip={setResTrip}
+          trips={trips}
+          handleTripUser={handleTripUser}
+          logedInUser={logedInUser}
+        />}/>
+        <Route 
+          path='/login/:id/selectfromto' 
+          element={<SelectFromTo
+          resTrip={resTrip}
+          trips={trips}
+          users={users}
+          handleTripUser={handleTripUser}
+        />}/>
+        <Route path='/login/:id/myreservation' element={<MyReservation
         userTrips={userTrips}
         handleDeleteTripUser={handleDeleteTripUser}
-      />}>
-      </Route>
+      />}/>
+      </Route>  
+      
       <Route path='/contactus' element={<ContactUs/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='*' element={<Missing/>}/>

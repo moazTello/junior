@@ -1,8 +1,9 @@
 import React from 'react';
 import UserTrip from './UserTrip';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 const MyReservation = ({userTrips,handleDeleteTripUser}) => {
   console.log('Trips');
+  const {id} = useParams();
   return (
     <article className='container'>
         <div className='tripsschedul'>
@@ -25,7 +26,7 @@ const MyReservation = ({userTrips,handleDeleteTripUser}) => {
             </div>
             <hr/>
             <Link 
-                    to='/trips'
+                    to={`/login/${id}`}
                     className='btn' 
                     style={{marginTop:"5px",borderRadius:"5px",
                             width:"80px",textDecoration:'none',

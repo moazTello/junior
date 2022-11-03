@@ -1,8 +1,9 @@
 import React from 'react';
 import Trip from './Trip';
-import { Link } from 'react-router-dom';
-const Trips = ({trips,handleTripUser}) => {
+import { Link, useParams} from 'react-router-dom';
+const Trips = ({trips,handleTripUser,setResTrip}) => {
   console.log('Trips');
+  const {id} = useParams();
   return (
     <article className='container'>
         <div className='tripsschedul'>
@@ -16,16 +17,20 @@ const Trips = ({trips,handleTripUser}) => {
             <hr/>
             <div className='overflow' 
                 // style={{height:"400px",overflow:"scroll"}}
-            > 
+            >
+                {id} 
             {trips.map(trip => (
                 <Trip className=''key={trip.id_trip} 
                 trip={trip}
-                handleTripUser={handleTripUser} />
+                handleTripUser={handleTripUser}
+                id={id}
+                setResTrip={setResTrip}
+                />
             ))}
             </div>
             <hr/>
             <Link 
-                    to='/myreservation'
+                    to={`/login/${id}/myreservation`}
                     className='btn' 
                     style={{marginTop:"5px",borderRadius:"5px",
                             width:"80px",textDecoration:'none',
