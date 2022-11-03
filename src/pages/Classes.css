@@ -184,7 +184,7 @@
     background-color:rgba(255,255,255,80%);
     text-align:center;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 650px) {
    .iconscontainer{
     height: 85px;
     width: 85px;
@@ -224,6 +224,14 @@
         width:60px;
         margin-right: 5px;
         font-size: 10px;
+    }
+    .tripsschedul{
+        display: flex;
+        width: 200px;
+        padding: 5px;
+        height: 170px;
+        font-size: 9px;
+
     }
     .why{
         height: 60px;

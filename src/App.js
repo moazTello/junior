@@ -299,6 +299,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Layout
         navDisplay={navDisplay}
+        logedInUser={logedInUser}
       />}>
       {/* <Route index element={<HomePage/>}/> */}
       <Route path='/junior' element={<HomePage/>}/>

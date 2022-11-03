@@ -10,7 +10,7 @@ const LogIn = ({userName,setUserName,handleSubmitlogin,password,setPassword}) =>
     const [hover,setHover] = useState(false);
     const [ valh,setValh ] = useState('60px');
     useEffect(() => {
-        if(width > 500){
+        if(width > 650){
             if(userName && password !== '' ){
                 setValh('60px'); 
             }
@@ -24,7 +24,7 @@ const LogIn = ({userName,setUserName,handleSubmitlogin,password,setPassword}) =>
         }
     },[password,userName,hover,width])
     const trigger = () => {
-        if(width > 500){
+        if(width > 650){
             if(userName && password !== '' ){
                 setValh('60px'); 
             }
@@ -65,7 +65,7 @@ const LogIn = ({userName,setUserName,handleSubmitlogin,password,setPassword}) =>
                     />
                     <label htmlFor='password' style={{color:"rgb(254,109,81)"}}>كلمة المرور</label>
                 </div>
-                <div className='addInput' style={{height: width>500 ?'80px' : '40px',padding:width > 500 ?'10px' : '0px'}}>
+                <div className='addInput' style={{height: width>650 ?'80px' : '40px',padding:width > 650 ?'10px' : '0px'}}>
                     <p>اذا كنت لا تمتلك حسابآ
                         <Link to='/' className='link' style={{marginRight:'10px'}}>انشاء حساب</Link> 
                     </p>

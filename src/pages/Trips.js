@@ -7,8 +7,8 @@ const Trips = ({trips,handleTripUser,setResTrip}) => {
   return (
     <article className='container'>
         <div className='tripsschedul'>
-            <div style={{margin:'10px'}}>الرحلات المتوفرة</div>
-            <hr style={{width:'100%',marginTop:'10px',marginBottom:'10px'}}/>
+            <div style={{margin:'0px'}}>الرحلات المتوفرة</div>
+            <hr style={{width:'100%',marginTop:'5px',marginBottom:'5px'}}/>
             <div className='trip'>
                 <p className='tripitem'> حجز</p>
                 <p className='tripitem'>الوجهة </p>
@@ -36,7 +36,7 @@ const Trips = ({trips,handleTripUser,setResTrip}) => {
                     className='btn' 
                     style={{marginTop:"5px",borderRadius:"5px",
                             width:"80px",textDecoration:'none',
-                            paddingTop:'4px'}}
+                            paddingTop:''}}
                     // onClick={() => {}}    
                 >
                     حجوزاتي

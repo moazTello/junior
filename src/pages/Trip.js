@@ -16,7 +16,7 @@ const Trip = ({trip,handleTripUser,id,setResTrip}) => {
                 <Link to={`/login/${id}/selectfromto`} 
                       className='btn'
                       style={{marginLeft:"0px",borderRadius:"0px",
-                              height:"32px",width:"80px",border:"none"
+                              width:"80px",border:"none"
                               ,textDecoration:'none',paddingTop:'5px'}}
                       onClick={() => {
                         setResTrip(trip.id_trip)

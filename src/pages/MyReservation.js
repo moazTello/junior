@@ -7,8 +7,8 @@ const MyReservation = ({userTrips,handleDeleteTripUser}) => {
   return (
     <article className='container'>
         <div className='tripsschedul'>
-            <div style={{margin:'10px'}}>الحجوزات التي قمت بها </div>
-            <hr style={{width:'100%',marginTop:'10px',marginBottom:'10px'}}/>
+            <div style={{margin:'0px'}}>الحجوزات التي قمت بها </div>
+            <hr style={{width:'100%',marginTop:'5px',marginBottom:'5px'}}/>
             <div className='trip'>
                 <p className='tripitem'> الغاء</p>
                 <p className='tripitem'>الوجهة </p>

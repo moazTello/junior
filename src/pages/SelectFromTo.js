@@ -8,6 +8,8 @@ const SelectFromTo = ({users,trips,handleTripUser,resTrip}) => {
   return (
     <article className='container'>
         <div className='tripsschedul'>
+            <div style={{margin:'0px'}}>الرحلة</div>
+            <hr style={{width:'100%',marginTop:'5px',marginBottom:'5px'}}/>
             <div className='trip'>
                 <p className='tripitem'>الوجهة </p>
                 <p className='tripitem'> عدد المقاعد </p>
@@ -23,7 +25,7 @@ const SelectFromTo = ({users,trips,handleTripUser,resTrip}) => {
                 <p className='tripitem'>{trip.date_trip}</p>
                 <p className='tripitem'>{trip.id_trip}</p>
             </div>
-            <hr style={{width:'100%',marginTop:'10px',marginBottom:'10px'}}/>
+            <hr style={{width:'100%',marginTop:'5px',marginBottom:'5px'}}/>
             <div className='addInput'> 
                     <input 
                         className='inputs' 
@@ -35,15 +37,12 @@ const SelectFromTo = ({users,trips,handleTripUser,resTrip}) => {
                     />
                     <label htmlFor='fromto' style={{color:"rgb(254,109,81)"}}>اختر مكان الانطلاق</label>
             </div>
-            <div className='tripitem' style={{width:'200px',marginTop:'25px'}}>sp {user.mybalance } : الرصيد الحالي  </div>
-            <div className='tripitem' style={{width:'200px',marginTop:'15px',marginBottom:'25px'}}>sp {trip.ticket_price } : سعر التذكرة   </div>
-            
-            <div className='trip' style={{width:'200px'}}>
+            {/* <div className='tripitem' style={{width:'200px',marginTop:''}}>sp {user.mybalance } : الرصيد الحالي  </div> */}
+            <div className='tripitem' style={{width:'200px',marginTop:'',marginBottom:'10px'}}> {trip.ticket_price } : الرحلات المتوفرة لديك   </div>
+            <div className='trip' style={{width:'100px'}}>
                 <button 
                     className='btn' 
-                    style={{marginTop:"5px",borderRadius:"5px",
-                    width:"80px",fontSize:'16px',
-                    paddingTop:'4px',height:'32px'}}
+                    style={{borderRadius:"5px"}}
                     onClick={() => handleTripUser(trip.id_trip,user.id)}    
                 >
                     حجز
@@ -51,9 +50,7 @@ const SelectFromTo = ({users,trips,handleTripUser,resTrip}) => {
                 <Link 
                         to={`/login/${id}`}
                         className='btn' 
-                        style={{marginTop:"5px",borderRadius:"5px",
-                                width:"80px",textDecoration:'none',
-                                paddingTop:'4px'}}
+                        style={{borderRadius:"5px",textDecoration:'none'}}
                         // onClick={() => {}}    
                     >
                         عودة
