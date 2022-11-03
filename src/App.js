@@ -314,4 +314,6 @@ function App() {
 // git commit -m "Deployed website"      
 // git push
 // npm run deploy
+// git config --global http.postBuffer 524288000
+// git config --global http.postBuffer 1048576000
 export default App;

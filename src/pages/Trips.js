@@ -30,7 +30,7 @@ const Trips = ({trips,handleTripUser}) => {
                     style={{marginTop:"5px",borderRadius:"5px",
                             width:"80px",textDecoration:'none',
                             paddingTop:'4px'}}
-                    onClick={() => {}}    
+                    // onClick={() => {}}    
                 >
                     حجوزاتي
             </Link> 

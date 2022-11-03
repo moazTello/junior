@@ -14,7 +14,7 @@ const HomePage = () => {
         <div className='why'>
           لماذا شركة ترافيل للنقل البري ؟
         </div>
-        <div style={{width:'100%',paddingTop:'50px',paddingBottom:'50px'}}>
+        <div style={{width:'100%',paddingTop:'50px',paddingBottom:'50px',display:'flex',justifyContent:'center',flexFlow:'wrap'}}>
           <div className='iconscontainer'>
             <FaBus className='icons'/>
             <p className='iconstext'>باصات حديثة و مكيفة</p>  

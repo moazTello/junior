@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Missing = () => {
   return (
-    <div>
+    <div className='container'>
       <p>
           هذه الصفحة غير موجودة 
       </p>
-      <Link to='/'>عودة</Link>
+      <Link to='/junior'>عودة</Link>
     </div>
 
   )

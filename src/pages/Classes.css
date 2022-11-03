@@ -169,8 +169,44 @@
     margin: 20px;
 
 }
-/* @media only screen and (max-width: 800px) {
-   .busimg{
-    width:100%;
-    } 
-} */
+@media only screen and (max-width: 500px) {
+   .iconscontainer{
+    height: 100px;
+    width: 100px;
+   }
+   .iconstext{
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+   }
+   .icons{
+    width:40px;
+    height: 40px;
+    }
+    .loginbox{
+        width: 200px;
+        height: 200px;
+        font-size: 12px;
+    }
+    .LoginPerson{
+        width:75px;
+        margin: 10px;
+    }
+    .addInput{
+        height: 25px;
+        width: 140px;
+        margin:10px;
+        font-size: 12px;
+    }
+    .inputs{
+        width: 100px;
+        height: 15px;
+        font-size: 12px;
+    }
+    .btn{
+        height: 15px;
+        width:60px;
+        margin-right: 5px;
+        font-size: 10px;
+    }
+}
