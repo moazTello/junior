@@ -29,7 +29,6 @@ const Trip = ({trip,handleTripUser,id,setResTrip}) => {
                 <p className='tripitem'>{trip.sets_trip}</p>
                 <p className='tripitem'>{trip.date_trip}</p>
                 <p className='tripitem'>{trip.id_trip}</p>
-                 
             </div>
     </article>
   )

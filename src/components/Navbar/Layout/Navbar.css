@@ -94,11 +94,13 @@
         padding: 0.5rem;
         width: 100%;
         display: table;
+        transition: none;
         /* margin: 0px; */
     }
     .nav-links:hover{
         background-color: white;
         border-radius: 0px ;
+        transition: none;
     }
     .Navbar-logo{
         position:absolute;
