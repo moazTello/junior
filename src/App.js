@@ -305,8 +305,10 @@ function App() {
     }
   }
   const handleDeleteTripUser = (id) => {
-    const trips = userTrips.filter(trip => trip.id_trip !== id);
-    setUserTrips(trips);
+    if(window.confirm('هل ترغب بإلغاء الرحلة ؟')){
+      const trips = userTrips.filter(trip => trip.id_trip !== id);
+      setUserTrips(trips);
+    }
   }
   return (
     <Routes>
