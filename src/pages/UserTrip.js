@@ -7,7 +7,8 @@ const UserTrip = ({trip,handleDeleteTripUser}) => {
                 <button 
                     className='btn' 
                     style={{marginLeft:"0px",borderRadius:"0px",width:"80px",border:"none"}}
-                    onClick={() => handleDeleteTripUser(trip.id_trip)}    
+                    onClick={() => handleDeleteTripUser(trip.id_trip)}   
+
                 >
                     إلغاء
                 </button>

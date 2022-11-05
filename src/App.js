@@ -266,17 +266,26 @@ function App() {
     }
     fetchClasses();
   },[]);
-  const handleSubmitlogin = () => {
+
+  const handleSubmitlogin = (e) => {
+    e.preventDefault();
     const user = users.find(user => (user.username) === userName);
-    if(userName === user.username && password === user.password){
-      // const response = api.get('./Users/1');
-      setLogedInUser(user);
-      setNavDisplay(false);
-      navigate(`/login/${user.id}`);
+    if(user){
+      if(userName === user.username && password === user.password){
+        // const response = api.get('./Users/1');
+        setLogedInUser(user);
+        setNavDisplay(false);
+        navigate(`/login/${user.id}`);
+      }
+      else{
+        console.log('moaz');
+        alert('المعلومات غير صحيحة يرجى اعادة تعبئة المعلومات ');
+        // navigate('/login');
+      }
     }
     else{
-      alert('المعلومات غير صحيحة يرجى اعادة تعبئة المعلومات ')
-      // navigate('/login');
+      console.log('notuser');
+      alert('المعلومات غير صحيحة يرجى اعادة تعبئة المعلومات ');
     }
   }
   const handleTripUser = (id,userid) => {
@@ -289,6 +298,10 @@ function App() {
         const usertrips = [...userTrips,newtripobj];
         setUserTrips(usertrips);
         navigate(`/login/${userid}/myreservation`);
+    }
+    else{
+      alert('لقد قمت بالتسجيل في هذه الرحلة مسبقآ ');
+      navigate(`/login/${userid}/myreservation`);
     }
   }
   const handleDeleteTripUser = (id) => {
