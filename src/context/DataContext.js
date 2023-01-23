@@ -160,7 +160,7 @@ export const DataProvider = ({ children }) => {
                                     });
     console.log(response);
     alert('تم ارسال الرسالة بنجاح و شكرآ'); 
-    navigate(`/login/contactus`);
+    navigate(`/contactus`);
     }
     catch(err) {
         alert('لم يتم ارسال الرسالة حاول من جديد');
@@ -178,7 +178,7 @@ export const DataProvider = ({ children }) => {
                                     });
     console.log(response);
     alert('تم ارسال طلبك بنجاح سنعاود مراسلتك على بريدك الالكتروني'); 
-    navigate(`/login/contactus`);
+    navigate(`/employeeorder`);
     }
     catch(err) {
         alert('لم يتم ارسال الطلب حاول من جديد');
