@@ -4,7 +4,7 @@ const Condetions = () => {
   console.log('Condetions');
   return (
     <article className='container'>
-      <div className='about'style={{width:"40%",height:"500px",overflowY:"scroll"}}>
+      <div className='about'style={{width:"40%",height:"400px",overflowY:"scroll"}}>
         <h1>شروط الاستخدام</h1>
         <br/>
         <p></p>

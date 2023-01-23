@@ -4,7 +4,7 @@ const Policy = () => {
   console.log('About');
   return (
     <article className='container'>
-      <div className='about'style={{width:"40%",height:"500px",overflowY:"scroll"}}>
+      <div className='about'style={{width:"40%",height:"400px",overflowY:"scroll"}}>
         <h1>سياسة الخصوصية</h1>
         <br/>
         <p>البيانات التي نجمعها تلقائيًا عند استخدامك لخدماتنا اننا نقوم تلقائيا بجمع المعلومات التالية عنك، عندما تتفاعل مع منصتنا أو عند استخدامك لخدماتنا</p>
