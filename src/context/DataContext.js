@@ -169,7 +169,7 @@ export const DataProvider = ({ children }) => {
   const handleEmployeeOrder = async(e) => {
     e.preventDefault();
     try{
-    const response = await api.post('customerUI/snedProblem',
+    const response = await api.post('customerUI/snedEmployeRequest',
                                     JSON.stringify({senderFirstName:employeeFirstName,
                                                     senderLastName:employeeLastName,
                                                     email:employeeEmail,request:employeeJob}),
