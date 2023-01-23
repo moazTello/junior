@@ -157,7 +157,10 @@ export const DataProvider = ({ children }) => {
                                         headers:{ 'Content-Type':'application/json'}
                                     });
     // console.log(response);
-    alert('تم ارسال الرسالة بنجاح و شكرآ'); 
+    alert('تم ارسال الرسالة بنجاح و شكرآ');
+    setPersonFeed("");
+    setEmailsender("");
+    setFeedBack(""); 
     navigate(`/junior`);
     }
     catch(err) {
@@ -176,7 +179,11 @@ export const DataProvider = ({ children }) => {
                                         headers:{ 'Content-Type':'application/json'}
                                     });
     // console.log(response);
-    alert('تم ارسال طلبك بنجاح سنعاود مراسلتك على بريدك الالكتروني'); 
+    alert('تم ارسال طلبك بنجاح سنعاود مراسلتك على بريدك الالكتروني');
+    setEmployeeFirstName("");
+    setEmployeeLastName("");
+    setEmployeeEmail("");
+    setEmployeeJob(""); 
     navigate(`/junior`);
     }
     catch(err) {
