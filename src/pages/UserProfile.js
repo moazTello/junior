@@ -4,7 +4,7 @@ import DataContext from '../context/DataContext';
 
 const UserProfile = () => {
     const {logedInUser} = useContext(DataContext);
-  console.log('myProfile');
+//   console.log('myProfile');
   return (
     <article className='container'>
         <div className='tripsschedul'>

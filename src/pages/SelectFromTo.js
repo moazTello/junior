@@ -8,12 +8,12 @@ const SelectFromTo = () => {
     const {logedInUser,trips,handleTripUser,resTrip
         // ,go_from,setGo_from
         ,onOptionChangeHandler,coordinates} = useContext(DataContext);
-  console.log('Trips');
+//   console.log('Trips');
 //   const {id} = useParams();
   const trip = trips.find(trip => (trip.trip_id).toString() === resTrip.toString());
-  console.log(trip);
-  console.log(trips);
-  console.log(resTrip);
+//   console.log(trip);
+//   console.log(trips);
+//   console.log(resTrip);
   return (
     <article className='container'>
         <div className='tripsschedul'>

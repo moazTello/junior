@@ -1,11 +1,8 @@
 import { createContext, useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
-// import { format } from 'date-fns';
 import api from '../api/trips';
 const DataContext = createContext({});
-
 export const DataProvider = ({ children }) => {
-
   const [token,setToken] = useState('');
   const [userName,setUserName] = useState('');
   const [password,setPassword] = useState('');
@@ -30,7 +27,7 @@ export const DataProvider = ({ children }) => {
       try{
         const response = await api.get('/customerUI/trip/getAllTrips');
         setTrips(response.data.trips);
-        console.log(response)
+        // console.log(response)
       }
       catch(err){
         console.log(err.message);
@@ -50,7 +47,7 @@ export const DataProvider = ({ children }) => {
         setToken(response.data.token);
         setUserTrips(response.data.customerTrips);
         setLogedInUser(response.data.customer);
-        console.log(response);
+        // console.log(response);
         setNavDisplay(false);
         navigate(`/login/alltrips`);
         }
@@ -63,8 +60,8 @@ export const DataProvider = ({ children }) => {
     const viewReservation = async (id) => {
       const findtrip = userTrips.find((trip) => (trip.trip_id).toString() === id.toString());
       if(!findtrip){ 
-          console.log(token);
-          console.log(id);
+          // console.log(token);
+          // console.log(id);
           const response = await api.get(`/customerUI/viewRservation/${id}`,
           {
               headers:{ 'Content-Type':'application/json',
@@ -79,7 +76,7 @@ export const DataProvider = ({ children }) => {
               if(check){
                 setCoordinates(response.data.Locations)
                 navigate(`login/${id}/selectfromto`);
-                console.log(check);
+                // console.log(check);
               }
               else{
                 alert('لا يمكنك التسجيل بالرحلة ليس هناك مقاعد متاحة');
@@ -100,7 +97,7 @@ export const DataProvider = ({ children }) => {
       }
     }
     const handleTripUser = async (id) => {
-          console.log(go_from);
+          // console.log(go_from);
           try{
           const response = await api.post(`/customerUI/saveRservation`,
           JSON.stringify({go_from:go_from,trip_availabel:availabelTrip,trip_id:id}),
@@ -112,7 +109,7 @@ export const DataProvider = ({ children }) => {
           setAvailabelTrip(response.data.trip_availabel);
 
           setTrips(response.data.AllTrips);
-          console.log(response.data.trips[0].reservations);
+          // console.log(response.data.trips[0].reservations);
           const usertrips = [...userTrips,response.data.userTrip];
           setUserTrips(usertrips);
           setLogedInUser(response.data.user);
@@ -138,7 +135,7 @@ export const DataProvider = ({ children }) => {
           setUserTrips(response.data.trips);
           setTrips(response.data.AllTrips);
           alert('تم الحذف !!');
-          console.log(response);
+          // console.log(response);
       }
       catch(err){
         alert('هناك خطأ ما لم يتم حذف الرحلة !');
@@ -146,19 +143,20 @@ export const DataProvider = ({ children }) => {
     }
   }
   const onOptionChangeHandler = (e) => {
-    console.log(go_from);
+    // console.log(go_from);
     setGo_from(e.target.value);
   }
   const handleFeedBack = async(e) => {
     e.preventDefault();
     try{
-    const response = await api.post('customerUI/snedProblem',
+    // const response = 
+    await api.post('customerUI/snedProblem',
                                     JSON.stringify({sender:personFeed,
                                                     email:emailsender,message:FeedBack}),
                                     {
                                         headers:{ 'Content-Type':'application/json'}
                                     });
-    console.log(response);
+    // console.log(response);
     alert('تم ارسال الرسالة بنجاح و شكرآ'); 
     navigate(`/contactus`);
     }
@@ -169,14 +167,15 @@ export const DataProvider = ({ children }) => {
   const handleEmployeeOrder = async(e) => {
     e.preventDefault();
     try{
-    const response = await api.post('customerUI/snedEmployeRequest',
+    // const response = 
+    await api.post('customerUI/snedEmployeRequest',
                                     JSON.stringify({senderFirstName:employeeFirstName,
-                                                    senderLastName:employeeLastName,
+                                                    senderLaststName:employeeLastName,
                                                     email:employeeEmail,request:employeeJob}),
                                     {
                                         headers:{ 'Content-Type':'application/json'}
                                     });
-    console.log(response);
+    // console.log(response);
     alert('تم ارسال طلبك بنجاح سنعاود مراسلتك على بريدك الالكتروني'); 
     navigate(`/employeeorder`);
     }
@@ -184,7 +183,7 @@ export const DataProvider = ({ children }) => {
         alert('لم يتم ارسال الطلب حاول من جديد');
     }
   }
-  console.log(token);
+  // console.log(token);
     return(
         <DataContext.Provider value={{
             navDisplay,logedInUser,

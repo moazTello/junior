@@ -7,7 +7,7 @@ import DataContext from '../context/DataContext';
 
 const Trips = () => {
     const {trips,setResTrip} = useContext(DataContext);
-  console.log('Trips');
+//   console.log('Trips');
 //   const {id} = useParams();
   return (
     <article className='container'>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Classes.css'
 const Policy = () => {
-  console.log('About');
+  // console.log('About');
   return (
     <article className='container'>
       <div className='about'style={{width:"40%",height:"400px",overflowY:"scroll"}}>

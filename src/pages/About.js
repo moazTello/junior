@@ -1,7 +1,7 @@
 import React from 'react';
 import './Classes.css'
 const About = () => {
-  console.log('About');
+  // console.log('About');
   return (
     <article className='container'>
      

@@ -7,7 +7,7 @@ import { useContext } from 'react';
 import DataContext from '../context/DataContext';
 const MyReservation = () => {
     const {userTrips,handleDeleteTripUser} = useContext(DataContext);
-  console.log('Trips');
+//   console.log('Trips');
 //   const {id} = useParams();
   return (
     <article className='container'>

@@ -7,7 +7,7 @@ import useWindowSize from '../hooks/useWindowSize';
 const ContactUs = () => {
   const {FeedBack,setFeedBack,handleFeedBack,emailsender,setEmailsender,personFeed,setPersonFeed} = useContext(DataContext);
   const { width } = useWindowSize(); 
-  console.log('About');
+//   console.log('About');
   return (
     <div className='container'>
         <div className='contactbox' height="700px">

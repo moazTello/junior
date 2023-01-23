@@ -7,7 +7,7 @@ import useWindowSize from '../hooks/useWindowSize';
 const EmployeeOrder = () => {
   const {handleEmployeeOrder,employeeJob,setEmployeeJob,employeeEmail,setEmployeeEmail,employeeLastName,setEmployeeLastName,employeeFirstName,setEmployeeFirstName} = useContext(DataContext);
   const { width } = useWindowSize(); 
-  console.log('About');
+//   console.log('About');
   return (
     <div className='container'>
         <div className='contactbox'>

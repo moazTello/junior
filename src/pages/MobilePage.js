@@ -2,7 +2,7 @@ import React from 'react';
 import './Classes.css';
 import mob from '../images/mobile2.png';
 const MobilePage = () => {
-  console.log('Mobile');
+  // console.log('Mobile');
   return (
     <article className='container'>
       <div className='about'style={{width:"40%",height:"fit-content",overflowY:"scroll"}}>
