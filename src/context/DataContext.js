@@ -59,7 +59,11 @@ export const DataProvider = ({ children }) => {
 
     const viewReservation = async (id) => {
       const findtrip = userTrips.find((trip) => (trip.trip_id).toString() === id.toString());
-      if(!findtrip){ 
+      const findtripdate = trips.find((trip) => (trip.trip_id).toString() === id.toString());
+      const nowdate = new Date().getTime()-(2*60*60*1000);
+      console.log(nowdate);
+      if(findtripdate <= nowdate){
+        if(!findtrip){ 
           // console.log(token);
           // console.log(id);
           const response = await api.get(`/customerUI/viewRservation/${id}`,
@@ -67,7 +71,9 @@ export const DataProvider = ({ children }) => {
               headers:{ 'Content-Type':'application/json',
                         'Authorization':token}
           });
-          console.log(response.data);
+          // console.log(response);
+
+          // console.log(response.data);
           const available = response.data.trip_availabel;
           const check = response.data.check_seats;
           setAvailabelTrip(available);
@@ -94,6 +100,10 @@ export const DataProvider = ({ children }) => {
       if(findtrip){
             alert('انت فعلآ سجلت في هذه الرحلة مسبقآ');
             navigate(`/login/alltrips`);
+      }
+      }
+      else{
+        alert('الرحلة قيد الانطلاق لقد تأخرت !');
       }
     }
     const handleTripUser = async (id) => {
