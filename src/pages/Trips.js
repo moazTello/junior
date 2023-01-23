@@ -1,9 +1,14 @@
-import React from 'react';
+import { React, useContext } from 'react';
 import Trip from './Trip';
-import { Link, useParams} from 'react-router-dom';
-const Trips = ({trips,handleTripUser,setResTrip}) => {
+import { Link, 
+    // useParams
+} from 'react-router-dom';
+import DataContext from '../context/DataContext';
+
+const Trips = () => {
+    const {trips,setResTrip} = useContext(DataContext);
   console.log('Trips');
-  const {id} = useParams();
+//   const {id} = useParams();
   return (
     <article className='container'>
         <div className='tripsschedul'>
@@ -21,26 +26,39 @@ const Trips = ({trips,handleTripUser,setResTrip}) => {
                 // style={{height:"400px",overflow:"scroll"}}
             >
             {trips.map(trip => (
-                <Trip className=''key={trip.id_trip} 
+                <Trip 
+                className=''
+                key={trip.trip_id} 
                 trip={trip}
-                handleTripUser={handleTripUser}
-                id={id}
                 setResTrip={setResTrip}
                 />
             ))}
             {!trips.length && <p style={{width:'100%',textAlign:'center',marginTop:'20px'}}>لا يوجد اي حجوزات لعرضها</p>}
             </div>
             <hr/>
-            <Link 
-                    to={`/login/${id}/myreservation`}
-                    className='btn' 
-                    style={{marginTop:"5px",borderRadius:"5px",
-                            width:"80px",textDecoration:'none',
-                            paddingTop:''}}
-                    // onClick={() => {}}    
-                >
-                    حجوزاتي
-            </Link> 
+            <div className='trip' style={{justifyContent:'center'}}>
+                <Link 
+                        // to={`/login/${id}/myreservation`}
+                        to={`/login/myreservation`}
+                        className='btn' 
+                        style={{marginTop:"5px",borderRadius:"5px",
+                                width:"120px",textDecoration:'none',
+                                paddingTop:''}}
+                        // onClick={() => {}}    
+                    >
+                        حجوزاتي
+                </Link>
+                <Link 
+                        to={`/login/userprofile`}
+                        className='btn' 
+                        style={{marginTop:"5px",borderRadius:"5px",
+                                width:"120px",textDecoration:'none',
+                                paddingTop:''}}
+                        // onClick={() => {}}    
+                    >
+                        ملفي الشخصي
+                </Link>    
+            </div> 
         </div>
     </article>
   )

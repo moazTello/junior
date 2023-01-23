@@ -1,34 +1,50 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import DataContext from '../context/DataContext';
 
-const Trip = ({trip,handleTripUser,id,setResTrip}) => {
-
+const Trip = ({trip,setResTrip}) => {
+        const {viewReservation} = useContext(DataContext);
   return (
     <article className='tripcontent'>        
             <div className='trip'>
-                {/* <button 
-                    className='btn' 
-                    style={{marginLeft:"0px",borderRadius:"0px",height:"32px",width:"80px",border:"none"}}
-                    onClick={() => handleTripUser(trip.id_trip)}    
-                >
-                    حجز
-                </button> */}
-                <Link to={`/login/${id}/selectfromto`} 
+                {/* <Link 
+
+                //       to={`/login/${trip.trip_id}/selectfromto`} 
                       className='btn'
                       style={{marginLeft:"0px",borderRadius:"0px",
                               width:"80px",border:"none"
                               ,textDecoration:'none',paddingTop:'5px'}}
-                      onClick={() => {
-                        setResTrip(trip.id_trip)
-                        console.log(trip.id_trip)}}    
-
+                      onClick={() =>  
+                                {
+                                console.log(trip.trip_id);
+                                setResTrip(trip.trip_id);
+                                viewReservation(trip.trip_id);
+                                }
+                        }  
+                      to={`/login/${trip.trip_id}/selectfromto`} 
                 >
                         حجز
-                </Link>
-                <p className='tripitem'>{trip.destination_trip} </p>
-                <p className='tripitem'>{trip.sets_trip}</p>
-                <p className='tripitem'>{trip.date_trip}</p>
-                <p className='tripitem'>{trip.id_trip}</p>
+                </Link> */}
+                <button 
+                className='btn'
+                style={{marginLeft:"0px",borderRadius:"0px",
+                        width:"100%",border:"none"
+                        ,textDecoration:'none',paddingTop:'5px'}}
+                onClick={() =>  
+                                {
+                                console.log(trip.trip_id);
+                                setResTrip(trip.trip_id);
+                                viewReservation(trip.trip_id);
+                                }
+                        }  
+                >
+                        حجز
+                </button>
+                <p className='tripitem'>{trip.destination} </p>
+                <p className='tripitem'>{trip.availabel_sets}</p>
+                <p className='tripitem'>{trip.date}</p>
+                <p className='tripitem'>{trip.trip_id}</p>
             </div>
     </article>
   )

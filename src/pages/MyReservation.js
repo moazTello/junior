@@ -1,9 +1,14 @@
 import React from 'react';
 import UserTrip from './UserTrip';
-import { Link, useParams } from 'react-router-dom';
-const MyReservation = ({userTrips,handleDeleteTripUser}) => {
+import { Link
+    // , useParams
+ } from 'react-router-dom';
+import { useContext } from 'react';
+import DataContext from '../context/DataContext';
+const MyReservation = () => {
+    const {userTrips,handleDeleteTripUser} = useContext(DataContext);
   console.log('Trips');
-  const {id} = useParams();
+//   const {id} = useParams();
   return (
     <article className='container'>
         <div className='tripsschedul'>
@@ -21,7 +26,7 @@ const MyReservation = ({userTrips,handleDeleteTripUser}) => {
                 // style={{height:"400px",overflow:"scroll"}}
             > 
             {userTrips.map(trip => (
-                <UserTrip className=''key={trip.id_trip} 
+                <UserTrip className=''key={trip.trip_id} 
                 trip={trip}
                 handleDeleteTripUser={handleDeleteTripUser} />
             ))}
@@ -29,7 +34,7 @@ const MyReservation = ({userTrips,handleDeleteTripUser}) => {
             </div>
             <hr/>
             <Link 
-                    to={`/login/${id}`}
+                    to={`/login/alltrips`}
                     className='btn' 
                     style={{marginTop:"5px",borderRadius:"5px",
                             width:"80px",textDecoration:'none',

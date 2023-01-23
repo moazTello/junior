@@ -10,7 +10,7 @@ const HomePage = () => {
   
   // const date = format(new Date(),`MMMM dd, yyyy pp`);
   return (
-    <div className='container' style={{overflow:'',height:'fit-content',flexDirection:'column'}}>
+    <div className='container' style={{overflow:'',height:'fit-content',minHeight:'71px',flexDirection:'column'}}>
        <div className='homeimge'>
          <img className='busimg' src={homebus} alt=''/>
          {/* <div className='tripsschedul' style={{height:'fit-content'}}>

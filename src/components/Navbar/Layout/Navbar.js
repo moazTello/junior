@@ -6,9 +6,12 @@ import { BiMenu } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { Link} from 'react-router-dom';
 import useWindowSize from '../../../hooks/useWindowSize';
+import { useContext } from 'react';
+import DataContext from '../../../context/DataContext';
 
-const Navbar = ({navDisplay,logedInUser}) => {
+const Navbar = () => {
     const { width } = useWindowSize();
+    const { navDisplay } = useContext(DataContext);
     const [ clicked , setClicked ] = useState(false);
     const handleClick = () => {
         if(width<=650){
@@ -35,7 +38,7 @@ const Navbar = ({navDisplay,logedInUser}) => {
                             <Link to='/login'className='nav-links' onClick={handleClick} style={{display:navDisplay ? 'block' : 'none'}} >
                                 <p>تسجيل الدخول</p> 
                             </Link>
-                            <Link to={`/login/${logedInUser.id}`}  className='nav-links' onClick={handleClick} style={{display:!navDisplay ? 'block' : 'none'}} >
+                            <Link to={`/login/alltrips`}  className='nav-links' onClick={handleClick} style={{display:!navDisplay ? 'block' : 'none'}} >
                                 <p>الرحلات المتوفرة</p> 
                             </Link>
                             <Link to='/junior'  className='nav-links' onClick={handleClick} >

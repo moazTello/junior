@@ -1,11 +1,12 @@
 import React from 'react';
 import LoginPerson from '../images/LoginPerson.svg';
 import { Link } from 'react-router-dom';
-import { useEffect,useState } from 'react';
+import { useEffect,useState,useContext } from 'react';
 import useWindowSize from '../hooks/useWindowSize';
+import DataContext from '../context/DataContext';
 
-
-const LogIn = ({userName,setUserName,handleSubmitlogin,password,setPassword}) => {
+const LogIn = () => {
+    const {userName,setUserName,handleSubmitlogin,password,setPassword} = useContext(DataContext);
     const { width } = useWindowSize();
     const [hover,setHover] = useState(false);
     const [ valh,setValh ] = useState('60px');
@@ -52,7 +53,10 @@ const LogIn = ({userName,setUserName,handleSubmitlogin,password,setPassword}) =>
                         value={userName}
                         onChange={(e) => setUserName(e.target.value)}
                     />
-                    <label htmlFor='username' style={{color:"rgb(254,109,81)"}}>رقم الجوال</label>
+                    <label htmlFor='username' style={{
+                        // color:"rgb(254,109,81)"
+                        color:"rgb(63,138,226)"
+                        }}>رقم الجوال</label>
                 </div> 
                 <div className='addInput'> 
                     <input 
@@ -63,7 +67,10 @@ const LogIn = ({userName,setUserName,handleSubmitlogin,password,setPassword}) =>
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <label htmlFor='password' style={{color:"rgb(254,109,81)"}}>كلمة المرور</label>
+                    <label htmlFor='password' style={{
+                        // color:"rgb(254,109,81)"
+                        color:"rgb(63,138,226)"
+                        }}>كلمة المرور</label>
                 </div>
                 <div className='addInput' style={{height: width>650 ?'80px' : '40px',padding:width > 650 ?'10px' : '0px'}}>
                     <p>اذا كنت لا تمتلك حسابآ
@@ -85,5 +92,4 @@ const LogIn = ({userName,setUserName,handleSubmitlogin,password,setPassword}) =>
     </div>
   )
 }
-
 export default LogIn;
