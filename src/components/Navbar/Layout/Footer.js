@@ -52,7 +52,7 @@ const Footer = () => {
             <a href="http://localhost:3000/about">
               <AiFillTwitterCircle size={38} style={{color:"white"}}/>
             </a>
-            <a href="http://localhost:3000/about">
+            <a href="https://www.instagram.com/p/Cn4df45KfAirdAYW7VB_VJi5eLKTb4SHqXjRmU0/">
               <AiFillInstagram size={38} style={{color:"white"}}/>
             </a>
             <a href="http://localhost:3000/about">
@@ -66,7 +66,7 @@ const Footer = () => {
             <a href="http://localhost:3000/about">
               <AiFillTwitterCircle size={18} style={{color:"white"}}/>
             </a>
-            <a href="http://localhost:3000/about">
+            <a href="https://www.instagram.com/p/Cn4df45KfAirdAYW7VB_VJi5eLKTb4SHqXjRmU0/">
               <AiFillInstagram size={18} style={{color:"white"}}/>
             </a>
             <a href="http://localhost:3000/about">
