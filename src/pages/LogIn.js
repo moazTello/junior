@@ -39,6 +39,9 @@ const LogIn = () => {
             setValh('41px'); 
         }
     }
+    const Register = () => {
+        alert('عذرآ تم الغاء التسجيل من خارج الشركة يمكنك التسجيل فقط ضمن الشركة');
+    }
     return (
     <div className='container'>
         <div className='loginbox'>
@@ -74,7 +77,7 @@ const LogIn = () => {
                 </div>
                 <div className='addInput' style={{height: width>650 ?'80px' : '40px',padding:width > 650 ?'10px' : '0px'}}>
                     <p>اذا كنت لا تمتلك حسابآ
-                        <Link to='/' className='link' style={{marginRight:'10px'}}>انشاء حساب</Link> 
+                        <Link to='/junior' className='link' onClick={Register} style={{marginRight:'10px'}}>انشاء حساب</Link> 
                     </p>
                     <button 
                         id='loginbtn' 
