@@ -46,7 +46,7 @@ const Footer = () => {
           <div className='footercontainer'>
             <img src={logo} alt=''/> 
             <div className='facebook'>
-            <a href="http://localhost:3000/about">
+            <a href="https://www.facebook.com/photo?fbid=900680114680665&set=a.167878474627503">
               <BsFacebook size={32} style={{color:"white"}}/>
             </a>
             <a href="http://localhost:3000/about">
@@ -60,7 +60,7 @@ const Footer = () => {
             </a> 
             </div>
             <div className='facebook2'>
-            <a href="http://localhost:3000/about">
+            <a href="https://www.facebook.com/photo?fbid=900680114680665&set=a.167878474627503">
               <BsFacebook size={15} style={{color:"white"}}/>
             </a>
             <a href="http://localhost:3000/about">
