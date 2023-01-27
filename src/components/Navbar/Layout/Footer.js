@@ -49,13 +49,13 @@ const Footer = () => {
             <a href="https://www.facebook.com/photo?fbid=900680114680665&set=a.167878474627503">
               <BsFacebook size={32} style={{color:"white"}}/>
             </a>
-            <a href="http://localhost:3000/about">
+            <a href="https://moaztello.github.io/junior">
               <AiFillTwitterCircle size={38} style={{color:"white"}}/>
             </a>
             <a href="https://www.instagram.com/p/Cn4df45KfAirdAYW7VB_VJi5eLKTb4SHqXjRmU0/">
               <AiFillInstagram size={38} style={{color:"white"}}/>
             </a>
-            <a href="http://localhost:3000/about">
+            <a href="https://moaztello.github.io/junior">
               <AiFillLinkedin size={38} style={{color:"white"}}/>
             </a> 
             </div>
@@ -63,13 +63,13 @@ const Footer = () => {
             <a href="https://www.facebook.com/photo?fbid=900680114680665&set=a.167878474627503">
               <BsFacebook size={15} style={{color:"white"}}/>
             </a>
-            <a href="http://localhost:3000/about">
+            <a href="https://moaztello.github.io/junior">
               <AiFillTwitterCircle size={18} style={{color:"white"}}/>
             </a>
             <a href="https://www.instagram.com/p/Cn4df45KfAirdAYW7VB_VJi5eLKTb4SHqXjRmU0/">
               <AiFillInstagram size={18} style={{color:"white"}}/>
             </a>
-            <a href="http://localhost:3000/about">
+            <a href="https://moaztello.github.io/junior">
               <AiFillLinkedin size={18} style={{color:"white"}}/>
             </a>
             
