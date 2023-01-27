@@ -7,21 +7,21 @@ const UserProfile = () => {
 //   console.log('myProfile');
   return (
     <article className='container'>
-        <div className='tripsschedul'>
+        <div className='tripsschedul' style={{width:"40%"}}>
             <div style={{margin:'0px'}}>الملف الشخصي</div>
             <hr style={{width:'100%',marginTop:'5px',marginBottom:'5px'}}/>
             <div className='trip'>
                 <div className='trip'
                     style={{flexDirection:'column',justifyContent:'space-evenly',height:'180px'}}>
-                    <p className='tripitem'>{logedInUser.name}</p>
-                    <p className='tripitem'>{logedInUser.fathername}</p>
-                    <p className='tripitem'>{logedInUser.mothername}</p>
-                    <p className='tripitem'>{logedInUser.birthdate}</p>
-                    <p className='tripitem'>{logedInUser.address}</p>
-                    <p className='tripitem'>{logedInUser.iss}</p>
-                    <p className='tripitem'>{logedInUser.trip_availabel}</p>
+                    <p className='tripitem hov'><span>{logedInUser.name} </span> <span> الاسم </span></p>
+                    <p className='tripitem hov'><span>{logedInUser.fathername}</span><span>سم الاب </span></p>
+                    <p className='tripitem hov'><span>{logedInUser.mothername}</span> <span>اسم الام </span></p>
+                    <p className='tripitem hov'><span>{logedInUser.birthdate}</span><span>تاريخ الميلاد </span></p>
+                    <p className='tripitem hov'><span>{logedInUser.address}</span><span>العنوان </span></p>
+                    <p className='tripitem hov'><span>{logedInUser.iss} </span><span>الرقم الوطني </span></p>
+                    <p className='tripitem hov'><span>{logedInUser.trip_availabel} </span> <span>عدد الرحلات </span></p>
                 </div>
-                <div className='trip' 
+                {/* <div className='trip' 
                     style={{flexDirection:'column',height:'180px'}}>
                     <p className='tripitem'> الاسم </p>
                     <p className='tripitem'>اسم الاب </p>
@@ -30,7 +30,7 @@ const UserProfile = () => {
                     <p className='tripitem'>  العنوان </p>
                     <p className='tripitem'> الرقم الوطني </p>
                     <p className='tripitem'>  عدد الرحلات </p>
-                </div>
+                </div> */}
             </div>
             <hr style={{width:'100%',marginTop:'5px',marginBottom:'5px'}}/>
             <Link 

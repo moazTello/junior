@@ -249,6 +249,14 @@
 .facebook2{
     display: none;
 }
+.hov{
+    display: flex;
+    justify-content: space-around;
+}
+.hov:hover{
+    background-color: rgb(63,138,226);
+    color:rgb(255, 255, 255);
+}
 @media only screen and (max-width: 650px) {
    .iconscontainer{
     height: 85px;
