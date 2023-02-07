@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import api from '../api/trips';
 const DataContext = createContext({});
 export const DataProvider = ({ children }) => {
-  const [color , setColor ] = useState('rgb(67,160,60)');
+  const [color , setColor ] = useState('rgb(48,48,48)');
   const [hoverColor , setHoverColor ] = useState('white');
 
   const [token,setToken] = useState('');
