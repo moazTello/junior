@@ -62,6 +62,10 @@ const Navbar = () => {
         setColor('rgb(150,25,25)');
         setCololist(false);
     }
+    const col5 = () => {
+        setColor('rgb(48,48,48)');
+        setCololist(false);
+    }
     const hand1 = () => {
         if(n1){setn1(false)}
         else{setn1(true)}
@@ -121,6 +125,7 @@ const Navbar = () => {
                                     <p className='colorcyrcle' style={{backgroundColor:'rgb(67,160,60)'}} onClick={col2}></p>
                                     <p className='colorcyrcle' style={{backgroundColor:'rgb(255,191,53)'}} onClick={col3}></p>
                                     <p className='colorcyrcle' style={{backgroundColor:'rgb(150,25,25)'}} onClick={col4}></p>
+                                    <p className='colorcyrcle' style={{backgroundColor:'rgb(48,48,48)'}} onClick={col5}></p>
                                 {/* <p style={{width:'14px',height:'14px',backgroundColor:'rgb(67,160,60)',borderRadius:'50%'}}></p> */}
                                 </div> 
                             <Link to='/about' className='nav-links' style={{backgroundColor:n1 ? color : hoverColor  ,color:n1 ? hoverColor : color}} onMouseEnter={hand1} onMouseLeave={hand1}  onClick={handleClick}>
