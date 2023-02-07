@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import api from '../api/trips';
 const DataContext = createContext({});
 export const DataProvider = ({ children }) => {
+  const [color , setColor ] = useState('rgb(67,160,60)');
+  const [hoverColor , setHoverColor ] = useState('white');
+
   const [token,setToken] = useState('');
   const [userName,setUserName] = useState('');
   const [password,setPassword] = useState('');
@@ -59,10 +62,14 @@ export const DataProvider = ({ children }) => {
 
     const viewReservation = async (id) => {
       const findtrip = userTrips.find((trip) => (trip.trip_id).toString() === id.toString());
-      const findtripdate = trips.find((trip) => (trip.trip_id).toString() === id.toString());
-      const nowdate = new Date().getTime()-(2*60*60*1000);
-      console.log(nowdate);
-      if(findtripdate <= nowdate){
+      // const findtripdate = trips.find((trip) => (trip.trip_id).toString() === id.toString());
+      // const date = new Date().getTime();
+      // const nowdate = new Date().getTime()-(2*60*60*1000);
+      // console.log(nowdate)
+      // console.log(date);
+      // console.log(findtripdate)
+      // console.log(findtripdate.date)
+      // if(findtripdate.date <= nowdate){
         if(!findtrip){ 
           // console.log(token);
           // console.log(id);
@@ -101,10 +108,10 @@ export const DataProvider = ({ children }) => {
             alert('انت فعلآ سجلت في هذه الرحلة مسبقآ');
             navigate(`/login/alltrips`);
       }
-      }
-      else{
-        alert('الرحلة قيد الانطلاق لقد تأخرت !');
-      }
+      // }
+      // else{
+      //   alert('الرحلة قيد الانطلاق لقد تأخرت !');
+      // }
     }
     const handleTripUser = async (id) => {
           // console.log(go_from);
@@ -213,7 +220,8 @@ export const DataProvider = ({ children }) => {
             go_from,setGo_from,coordinates,onOptionChangeHandler,
             FeedBack,setFeedBack,handleFeedBack,setPersonFeed,personFeed,emailsender,setEmailsender
             ,handleEmployeeOrder,employeeJob,setEmployeeJob,employeeEmail,setEmployeeEmail,employeeLastName
-            ,setEmployeeLastName,employeeFirstName,setEmployeeFirstName 
+            ,setEmployeeLastName,employeeFirstName,setEmployeeFirstName
+            ,color,setColor,hoverColor,setHoverColor 
         }}>
             {children}
         </DataContext.Provider>

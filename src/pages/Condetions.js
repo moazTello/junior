@@ -1,10 +1,12 @@
-import React from 'react';
-import './Classes.css'
+import React, { useContext } from 'react';
+import './Classes.css';
+import DataContext from '../context/DataContext';
 const Condetions = () => {
+  const {color} = useContext(DataContext);
   // console.log('Condetions');
   return (
     <article className='container'>
-      <div className='about'style={{width:"40%",height:"400px",overflowY:"scroll"}}>
+      <div className='about'style={{width:"40%",height:"400px",overflowY:"scroll",color:color}}>
         <h1>شروط الاستخدام</h1>
         <br/>
         <p></p>

@@ -1,14 +1,19 @@
-import { React, useContext } from 'react';
+import { React, useContext, useState } from 'react';
 import { Link} from 'react-router-dom';
 import DataContext from '../context/DataContext';
 
 const UserProfile = () => {
-    const {logedInUser} = useContext(DataContext);
+    const {logedInUser,color,hoverColor} = useContext(DataContext);
+    const [ n1 , setn1 ] = useState(true);
+    const handn1 = () => {
+            if(n1){setn1(false)}
+            else{setn1(true)}
+    }
 //   console.log('myProfile');
   return (
     <article className='container'>
         <div className='tripsschedul' style={{width:"40%"}}>
-            <div style={{margin:'0px'}}>الملف الشخصي</div>
+            <div style={{margin:'0px',color:color}}>الملف الشخصي</div>
             <hr style={{width:'100%',marginTop:'5px',marginBottom:'5px'}}/>
             <div className='trip'>
                 <div className='trip'
@@ -38,7 +43,10 @@ const UserProfile = () => {
                     className='btn' 
                     style={{marginTop:"5px",borderRadius:"5px",
                             width:"80px",textDecoration:'none',
-                            paddingTop:''}}
+                            paddingTop:'',
+                            backgroundColor:!n1 ? hoverColor : color , color:!n1?color:hoverColor}}
+                    onMouseEnter={handn1}
+                    onMouseLeave={handn1}
                     // onClick={() => {}}    
                 >
                     عودة

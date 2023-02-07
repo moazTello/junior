@@ -1,10 +1,13 @@
 import React from 'react';
-import './Classes.css'
+import './Classes.css';
+import { useContext } from 'react';
+import DataContext from '../context/DataContext';
 const Safty = () => {
+  const {color} = useContext(DataContext);
   // console.log('Condetions');
   return (
     <article className='container'>
-      <div className='about'style={{width:"40%",height:"400px",overflowY:"scroll"}}>
+      <div className='about'style={{width:"40%",height:"400px",overflowY:"scroll",color:color}}>
         <h1>الأمان</h1>
         <br/>
         <p></p>

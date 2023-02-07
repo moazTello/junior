@@ -1,10 +1,13 @@
 import React from 'react';
-import './Classes.css'
+import './Classes.css';
+import { useContext } from 'react';
+import DataContext from '../context/DataContext';
 const Policy = () => {
+  const {color} = useContext(DataContext);
   // console.log('About');
   return (
     <article className='container'>
-      <div className='about'style={{width:"40%",height:"400px",overflowY:"scroll"}}>
+      <div className='about'style={{width:"40%",height:"400px",overflowY:"scroll",color:color}}>
         <h1>سياسة الخصوصية</h1>
         <br/>
         <p>البيانات التي نجمعها تلقائيًا عند استخدامك لخدماتنا اننا نقوم تلقائيا بجمع المعلومات التالية عنك، عندما تتفاعل مع منصتنا أو عند استخدامك لخدماتنا</p>

@@ -1,4 +1,4 @@
-import { React, useContext } from 'react';
+import { React, useContext, useState } from 'react';
 import Trip from './Trip';
 import { Link, 
     // useParams
@@ -6,12 +6,22 @@ import { Link,
 import DataContext from '../context/DataContext';
 
 const Trips = () => {
-    const {trips,setResTrip} = useContext(DataContext);
+    const {trips,setResTrip,color,hoverColor} = useContext(DataContext);
+    const [ n1 , setn1 ] = useState(true);
+    const handn1 = () => {
+            if(n1){setn1(false)}
+            else{setn1(true)}
+    }
+    const [ n2 , setn2 ] = useState(true);
+    const handn2 = () => {
+            if(n2){setn2(false)}
+            else{setn2(true)}
+    }
 //   console.log('Trips');
 //   const {id} = useParams();
   return (
     <article className='container'>
-        <div className='tripsschedul'>
+        <div className='tripsschedul' style={{color:color}}>
             <div style={{margin:'0px'}}>الرحلات المتوفرة</div>
             <hr style={{width:'100%',marginTop:'5px',marginBottom:'5px'}}/>
             <div className='trip'>
@@ -43,7 +53,11 @@ const Trips = () => {
                         className='btn' 
                         style={{marginTop:"5px",borderRadius:"5px",
                                 width:"120px",textDecoration:'none',
-                                paddingTop:''}}
+                                paddingTop:'',
+                                backgroundColor:!n1 ? hoverColor : color , color:!n1?color:hoverColor,
+                                border:`solid 1px ${color}`}}
+                        onMouseEnter={handn1}
+                        onMouseLeave={handn1}
                         // onClick={() => {}}    
                     >
                         حجوزاتي
@@ -53,7 +67,11 @@ const Trips = () => {
                         className='btn' 
                         style={{marginTop:"5px",borderRadius:"5px",
                                 width:"120px",textDecoration:'none',
-                                paddingTop:''}}
+                                paddingTop:'',
+                                backgroundColor:!n2 ? hoverColor : color , color:!n2?color:hoverColor,
+                                border:`solid 1px ${color}`}}
+                        onMouseEnter={handn2}
+                        onMouseLeave={handn2}
                         // onClick={() => {}}    
                     >
                         ملفي الشخصي

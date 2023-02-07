@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import UserTrip from './UserTrip';
 import { Link
     // , useParams
@@ -6,12 +6,17 @@ import { Link
 import { useContext } from 'react';
 import DataContext from '../context/DataContext';
 const MyReservation = () => {
-    const {userTrips,handleDeleteTripUser} = useContext(DataContext);
+    const {userTrips,handleDeleteTripUser,color,hoverColor} = useContext(DataContext);
+    const [ n1 , setn1 ] = useState(true);
+    const handn1 = () => {
+            if(n1){setn1(false)}
+            else{setn1(true)}
+    }
 //   console.log('Trips');
 //   const {id} = useParams();
   return (
     <article className='container'>
-        <div className='tripsschedul'>
+        <div className='tripsschedul' style={{color:color}}>
             <div style={{margin:'0px'}}>الحجوزات التي قمت بها </div>
             <hr style={{width:'100%',marginTop:'5px',marginBottom:'5px'}}/>
             <div className='trip'>
@@ -38,7 +43,12 @@ const MyReservation = () => {
                     className='btn' 
                     style={{marginTop:"5px",borderRadius:"5px",
                             width:"80px",textDecoration:'none',
-                            paddingTop:'4px'}}
+                            paddingTop:'4px',
+                            backgroundColor:!n1 ? hoverColor : color , color:!n1?color:hoverColor,
+                            border:`solid 1px ${color}`
+                    }}
+                    onMouseEnter={handn1}
+                    onMouseLeave={handn1}
                     // onClick={() => {}}    
                 >
                     عودة

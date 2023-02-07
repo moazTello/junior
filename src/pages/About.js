@@ -1,11 +1,14 @@
 import React from 'react';
-import './Classes.css'
+import './Classes.css';
+import { useContext } from 'react';
+import DataContext from '../context/DataContext';
 const About = () => {
+  const {color} = useContext(DataContext);
   // console.log('About');
   return (
     <article className='container'>
      
-      <div className='about'style={{}}>
+      <div className='about' style={{color:color}}>
         <h1>حول الشركة</h1>
         <br/>
         <p>

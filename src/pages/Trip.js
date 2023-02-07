@@ -1,12 +1,22 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext,useState } from 'react';
 import DataContext from '../context/DataContext';
 
 const Trip = ({trip,setResTrip}) => {
-        const {viewReservation} = useContext(DataContext);
+        const {viewReservation,color,hoverColor} = useContext(DataContext);
+        const [ n1 , setn1 ] = useState(true);
+        const handn1 = () => {
+                if(n1){setn1(false)}
+                else{setn1(true)}
+        }
+        const [ n2 , setn2 ] = useState(true);
+        const handn2 = () => {
+                if(n2){setn2(false)}
+                else{setn2(true)}
+        }
   return (
-    <article className='tripcontent'>        
+    <article className='tripcontent' onMouseEnter={handn2} onMouseLeave={handn2} style={{color:!n2 ? color : hoverColor,backgroundColor:n2 ? color : hoverColor}}>        
             <div className='trip'>
                 {/* <Link 
 
@@ -30,7 +40,11 @@ const Trip = ({trip,setResTrip}) => {
                 className='btn'
                 style={{marginLeft:"0px",borderRadius:"0px",
                         width:"100%",border:"none"
-                        ,textDecoration:'none',paddingTop:'5px'}}
+                        ,textDecoration:'none',paddingTop:'5px'
+                        ,backgroundColor:!n1 ? hoverColor : color , color:!n1?color:hoverColor 
+                }}
+                onMouseEnter={handn1}
+                onMouseLeave={handn1}
                 onClick={() =>  
                                 {
                                 console.log(trip.trip_id);

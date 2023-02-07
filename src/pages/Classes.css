@@ -14,11 +14,6 @@
 .loginbox{
     width:400px;
     height: 400px;
-    /* color: rgb(254,109,81); */
-    color: rgb(63,138,226);
-    /* color: rgb(67,10,191); */
-    /* border:solid 1px rgb(254,109,81); */
-    border:solid 1px rgb(63,138,226);
     background-color: rgba(255, 254, 253,80%);
     border-radius: 50px;
     display: flex;
@@ -43,12 +38,8 @@
 .inputs{
     width: 200px;
     height: 25px;
-    /* border: solid 1px rgb(254,109,81); */
-    border: solid 1px rgb(63,138,226);
     border-radius: 15px;
     padding-left: 20px;
-    /* color:rgb(254,109,81); */
-    color:rgb(63,138,226);
 }
 .inputs:focus{
     outline: none;
@@ -57,32 +48,17 @@
     height: 30px;
     width:100px;
     margin-right: 5px;
-    color:white;
-    /* background-color: rgb(254,109,81); */
-    background-color: rgb(63,138,226);
-    /* border: solid 1px rgb(254,109,81); */
-    border: solid 1px rgb(63,138,226);
     border-radius: 10px;
     transition: all 0.5s ease-in-out;
     text-align: center;
 }
 .btn:hover{
     cursor: pointer;
-    background-color: white;
-    /* color:rgb(254,109,81); */
-    color:rgb(63,138,226);
     transition: all 0.5s ease-in-out;
 }
 .link{
     color:rgb(100, 91, 88);
     text-decoration: none;
-    /* background-color: rgb(254,109,81); */
-    /* padding: 5px; */
-    /* border-radius: 10px; */
-}
-.link:hover{
-    /* color: rgb(254,109,81); */
-    color: rgb(63,138,226);
 }
 .tripsschedul{
     display: flex;
@@ -91,7 +67,6 @@
     align-items: center;
     /* width: 430px; */
     width: 80%;
-    /* background-color: rgba(255, 254, 253,80%); */
     background-color: rgba(255, 254, 253,95%);
     border-radius: 15px;
     padding: 10px;
@@ -111,11 +86,6 @@
     justify-content: space-between;
     align-items: center;
     width:100%;
-}
-.tripcontent:hover{
-    color: white;
-    /* background-color: rgb(254,109,81); */
-    background-color: rgb(63,138,226);
 }
 .trip{
     display: flex;
@@ -159,9 +129,6 @@
     align-items: center;
 }
 .why{
-    color: white;
-    /* background-color: rgb(254,109,81); */
-    background-color: rgb(63,138,226);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -172,13 +139,9 @@
 .icons{
     width:75px;
     height: 75px;
-    /* color:rgb(254,109,81); */
-    color:rgb(63,138,226);
 }
 .iconstext{
     font-size: 18px;
-    /* color: rgb(254,109,81); */
-    color: rgb(63,138,226);
     margin-top: 30px;
 }
 .iconscontainer{
@@ -206,7 +169,6 @@
 }
 .footertext{
     font-size: 18px;
-    /* color: rgb(254,109,81); */
     color: rgb(255, 255, 255);
     margin-top: 30px;
     text-decoration: none;
@@ -216,19 +178,12 @@
     height:fit-content;
     padding:30px;
     border-radius:20px;
-    /* color:rgb(254,109,81); */
-    color:rgb(63,138,226);
     background-color:rgba(255,255,255,80%);
     text-align:center;
 }
 .contactbox{
     width:400px;
     height: 400px;
-    /* color: rgb(254,109,81); */
-    color: rgb(63,138,226);
-    /* color: rgb(67,10,191); */
-    /* border:solid 1px rgb(254,109,81); */
-    border:solid 1px rgb(63,138,226);
     background-color: rgba(255, 254, 253,80%);
     border-radius: 50px;
     display: flex;
@@ -244,7 +199,6 @@
     justify-content: space-between;
     align-items: center;
     width: 200px;
-
 }
 .facebook2{
     display: none;
@@ -253,9 +207,50 @@
     display: flex;
     justify-content: space-around;
 }
-.hov:hover{
-    background-color: rgb(63,138,226);
-    color:rgb(255, 255, 255);
+
+.thirdMain{
+    width:100%;
+    /* margin-top: 80px;
+    margin-bottom: 80px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    background: url('../images/busthird.svg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.homethird{
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    /* margin: 20px; */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* padding: 0px; */
+    /* padding-right: 10px; */
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.thirdtitle{
+    margin-right: 10px;
+    font-size: 20px;
+    text-align: end;
+    width: 90%;
+}
+.thirdcontent{
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: end;
+    width: 90%;
 }
 @media only screen and (max-width: 650px) {
    .iconscontainer{
@@ -311,7 +306,6 @@
     .btn:hover{
         transition: none;
     }
-    
     .tripsschedul{
         display: flex;
         width: 200px;
@@ -320,7 +314,6 @@
         height: fit-content;
         max-height: 300px;
         font-size: 9px;
-
     }
     .why{
         height: 60px;
@@ -347,6 +340,11 @@
         justify-content: space-between;
         align-items: center;
         width: 100px;
-    
+    }
+    .thirdtitle{
+        font-size: 18px;
+    }
+    .thirdcontent{
+        font-size: 9px;
     }
 }
