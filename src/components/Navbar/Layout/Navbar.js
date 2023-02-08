@@ -54,10 +54,10 @@ const Navbar = () => {
         setColor('rgb(67,160,60)');
         setCololist(false);
     }
-    const col3 = () => {
-        setColor('rgb(255,191,53)');
-        setCololist(false);
-    }
+    // const col3 = () => {
+    //     setColor('rgb(255,191,53)');
+    //     setCololist(false);
+    // }
     const col4 = () => {
         setColor('rgb(150,25,25)');
         setCololist(false);
@@ -118,12 +118,14 @@ const Navbar = () => {
                                     ثمة الموقع 
                                 </p>
                                 </button>
+                                
                                 <div className='colorcont' style={{ left:width > 650 ? `${width - 720}px`:`${width - 200}px`
                                                                     ,top:width > 650 ? '65px': '10px'
                                                                     ,display:(( width <= 750 && width > 650) || !cololist) ? 'none' : 'flex'}}>
                                     <p className='colorcyrcle' style={{backgroundColor:'rgb(63,138,226)'}} onClick={col1}></p>
                                     <p className='colorcyrcle' style={{backgroundColor:'rgb(67,160,60)'}} onClick={col2}></p>
-                                    <p className='colorcyrcle' style={{backgroundColor:'rgb(255,191,53)'}} onClick={col3}></p>
+                                    {/* <p className='colorcyrcle' style={{backgroundColor:'rgb(255,191,53)'}} onClick={col3}></p> */}
+                                    <input className='colorcyrcle' type='color' onChange={(e) => setColor(e.target.value)} style={{backgroundColor:color,border:`solid 1px ${color}`}} />
                                     <p className='colorcyrcle' style={{backgroundColor:'rgb(150,25,25)'}} onClick={col4}></p>
                                     <p className='colorcyrcle' style={{backgroundColor:'rgb(48,48,48)'}} onClick={col5}></p>
                                 {/* <p style={{width:'14px',height:'14px',backgroundColor:'rgb(67,160,60)',borderRadius:'50%'}}></p> */}

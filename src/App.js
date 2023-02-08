@@ -21,6 +21,7 @@ import MobilePage from './pages/MobilePage';
 import Team from './pages/Team';
 import EmployeeOrder from './pages/EmployeeOrder';
 import Safty from './pages/Safty';
+import Map from './pages/Map';
 function App() {
   return (
     <DataProvider>
@@ -59,6 +60,7 @@ function App() {
           <Route path='/team' element={<Team/>}/>
           <Route path='/employeeorder' element={<EmployeeOrder/>}/>
           <Route path='/safty' element={<Safty/>}/>
+          <Route path='/map' element={<Map/>}/>
           <Route path='*' element={<Missing/>}/>
           </Route>
       </Routes>   

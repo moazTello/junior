@@ -18,6 +18,11 @@ const SelectFromTo = () => {
             if(n2){setn2(false)}
             else{setn2(true)}
     }
+    const [ n3 , setn3 ] = useState(true);
+    const handn3 = () => {
+            if(n3){setn3(false)}
+            else{setn3(true)}
+    }
 //   console.log('Trips');
 //   const {id} = useParams();
   const trip = trips.find(trip => (trip.trip_id).toString() === resTrip.toString());
@@ -72,6 +77,20 @@ const SelectFromTo = () => {
                         color:color
                         }}>اختر مكان الانطلاق</label>
             </div>
+            {/* <Link to='/map' className='footertext' style={{color:color}}>البحث عن الموقع على الخريطة</Link>  */}
+            <Link 
+                        to={`/map`}
+                        className='btn' 
+                        style={{borderRadius:"5px",textDecoration:'none',width:"60%",
+                                backgroundColor:!n3 ? hoverColor : color , color:!n3?color:hoverColor,
+                                border:`solid 1px ${color}`}}
+                        onMouseEnter={handn3}
+                        onMouseLeave={handn3}
+                        // onClick={() => {}}    
+                    >
+                        البحث عن الموقع على الخريطة
+                </Link>
+                <br/> 
             {/* <div className='tripitem' style={{width:'200px',marginTop:''}}>sp {user.mybalance } : الرصيد الحالي  </div> */}
             <div className='tripitem' style={{width:'200px',marginTop:'',marginBottom:'10px'}}> {logedInUser.trip_availabel } : الرحلات المتوفرة لديك   </div>
             <div className='trip' style={{width:'100px'}}>

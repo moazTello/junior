@@ -35,7 +35,7 @@ const Footer = () => {
             {/* <FaBus className='icons'/> */}
             <Link to='/condetions' className='footertext'>شروط الاستخدام</Link>  
             <Link to='/policy' className='footertext'>سياسة الخصوصية</Link>   
-            <Link to='/safty' className='footertext'>الأمان</Link>  
+            <Link to='/map' className='footertext'>خرائط المحافظات</Link>  
             {/* <p className='footertext'>الأمان </p>   */}
             {/* <p className='footertext'>شروط و أحكام</p>   */}
           </div>

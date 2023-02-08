@@ -28,12 +28,12 @@ const UserTrip = ({trip,handleDeleteTripUser}) => {
                 >
                     إلغاء
                 </button>
-
                 <p className='tripitem'>{trip.destination} </p>
+                <p className='tripitem'>{trip.start_station} </p>
                 <p className='tripitem'>{trip.availabel_sets}</p>
                 <p className='tripitem'>{trip.date}</p>
                 {/* <p className='tripitem'><FaBus/></p> */}
-                <p className='tripitem'>{trip.trip_id}</p>
+                {/* <p className='tripitem'>{trip.trip_id}</p> */}
 
             </div>
     </article>

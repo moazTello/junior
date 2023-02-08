@@ -87,7 +87,8 @@ export const DataProvider = ({ children }) => {
           if(available){
             if(logedInUser.trip_availabel > 0){
               if(check){
-                setCoordinates(response.data.Locations)
+                setCoordinates(response.data.Locations);
+                console.log(response.data.Locations);
                 navigate(`login/${id}/selectfromto`);
                 // console.log(check);
               }

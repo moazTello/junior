@@ -15,8 +15,9 @@ const Trip = ({trip,setResTrip}) => {
                 if(n2){setn2(false)}
                 else{setn2(true)}
         }
+        console.log(trip);
   return (
-    <article className='tripcontent' onMouseEnter={handn2} onMouseLeave={handn2} style={{color:!n2 ? color : hoverColor,backgroundColor:n2 ? color : hoverColor}}>        
+    <article className='tripcontent' onMouseEnter={handn2} onMouseLeave={handn2} style={{color:n2 ? color : hoverColor,backgroundColor:!n2 ? color : hoverColor}}>        
             <div className='trip'>
                 {/* <Link 
 
@@ -56,9 +57,10 @@ const Trip = ({trip,setResTrip}) => {
                         حجز
                 </button>
                 <p className='tripitem'>{trip.destination} </p>
+                <p className='tripitem'>{trip.start_station} </p>
                 <p className='tripitem'>{trip.availabel_sets}</p>
                 <p className='tripitem'>{trip.date}</p>
-                <p className='tripitem'>{trip.trip_id}</p>
+                {/* <p className='tripitem'>{trip.trip_id}</p> */}
             </div>
     </article>
   )
