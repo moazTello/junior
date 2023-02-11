@@ -22,7 +22,19 @@ import Team from './pages/Team';
 import EmployeeOrder from './pages/EmployeeOrder';
 import Safty from './pages/Safty';
 import Map from './pages/Map';
-function App() {
+function App(props) {
+  // const googleMapsApiKey = "AIzaSyCU2iuGkYA674riFWhoKYby3rEYrBuHeNQ";
+
+  // const {places} = props;
+
+  // const {
+  //   loadingElement,
+  //   containerElement,
+  //   mapElement,
+  //   defaultCenter,
+  //   defaultZoom
+  // } = props;
+
   return (
     <DataProvider>
       <Routes>
@@ -61,6 +73,20 @@ function App() {
           <Route path='/employeeorder' element={<EmployeeOrder/>}/>
           <Route path='/safty' element={<Safty/>}/>
           <Route path='/map' element={<Map/>}/>
+          {/* <Route path='/map' element={
+            <Map
+                googleMapURL={
+                  'https://maps.googleapis.com/maps/api/js?key=' +
+                  googleMapsApiKey +
+                  '&libraries=geometry,drawing,places'
+                }
+                markers={places}
+                loadingElement={loadingElement || <div style={{height: `100%`}}/>}
+                containerElement={containerElement || <div style={{height: "80vh"}}/>}
+                mapElement={mapElement || <div style={{height: `100%`}}/>}
+                defaultCenter={defaultCenter || {lat: 25.798939, lng: -80.291409}}
+                defaultZoom={defaultZoom || 11}
+              />}/>  */}
           <Route path='*' element={<Missing/>}/>
           </Route>
       </Routes>   
@@ -75,3 +101,20 @@ function App() {
 // git config --global http.postBuffer 524288000
 // git config --global http.postBuffer 1048576000
 export default App;
+// AIzaSyCU2iuGkYA674riFWhoKYby3rEYrBuHeNQ
+// {
+//   "version":2,
+//   "builds":[
+//       {
+//           "src":"./index.js",
+//           "use":"@vercel/node"
+//       }
+//   ],
+//   "routes":[
+//       {
+//           "src":"/(.*)",
+//           "dest":"/"
+//       }
+//   ]
+// }
+// "homepage": "https://moazTello.gethub.io/junior",
