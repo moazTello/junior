@@ -35,7 +35,7 @@ const Map = () => {
     // <Map1/>
     <article className='container'>
      <div className="mapouter">
-        <div className="gmap_canvas">
+        <div className="gmap_canvas" style={{display:"flex",justifyContent:"flex-start",flexDirection:"column",alignItems:"center"}}>
                   <select className='addInput' 
                             style={{
                                     color:color,borderRadius:"5px",height:"23px"}}

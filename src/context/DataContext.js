@@ -38,7 +38,7 @@ export const DataProvider = ({ children }) => {
     }
     fetchClasses();
   },[]);
-
+  // console.log(trips);
   const handleSubmitlogin = async (e) => {
     e.preventDefault();
         try{
